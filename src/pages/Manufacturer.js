@@ -10,7 +10,7 @@ const BrandsTable = () => {
 
 	const fetchBrands = async () => {
 		try {
-			const response = await axios.get("http://localhost:8000/api/car/brand");
+			const response = await axios.get("https://dealerflow-backend-api-jrt9.onrender.com/api/car/brand");
 			setBrands(response.data);
 		} catch (error) {
 			console.error("Error fetching brands:", error);
@@ -20,7 +20,7 @@ const BrandsTable = () => {
 	const getManufacturer = async () => {
 		try {
 			const response = await axios.get(
-				"http://localhost:8000/api/manufacturerVehicle"
+				"https://dealerflow-backend-api-jrt9.onrender.com/api/car/manufacturerVehicle"
 			);
 			console.log(response.data);
 			setManufacturer(response.data);
@@ -89,7 +89,7 @@ const BrandsTable = () => {
 	return (
 		<div style={containerStyle}>
 			<div className='manufacturer-title'>
-				<h1>Manufacturer</h1>
+			<h1>Manufacturer</h1>
 			</div>
 			<h2 className='manufacturer-click-for-more-info'>
 				click image for more information

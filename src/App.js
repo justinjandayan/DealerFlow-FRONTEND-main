@@ -13,7 +13,7 @@ import Landingpage from "./components/LandingPage";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(
-    localStorage.getItem("isAuthenticated") === "false"
+    localStorage.getItem("isAuthenticated") === "true"
   );
 
   const handleLogin = (token) => {

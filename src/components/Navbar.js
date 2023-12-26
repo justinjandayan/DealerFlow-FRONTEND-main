@@ -23,7 +23,7 @@ function Navbar({ handleLogout }) {
 		<>
 			<IconContext.Provider value={{ color: "#fff" }}>
 				<div className='navbar px-3'>
-					<h1 className='text-white'>DealerFlow</h1>
+					<img className='image-black' src={process.env.PUBLIC_URL + '/images/image8.png'} alt="logo" />
 					<Link
 						to='#'
 						className='menu-bars'>

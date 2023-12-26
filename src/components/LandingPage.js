@@ -5,16 +5,14 @@ function LandingPage() {
 	return (
 		<div className='landing-page'>
 			<div className='row'>
-				<h4 className='fs-1 text text-center text-white'>DealerFlow</h4>
-				<hr className='text-white' />
+
 				<Link
 					className='landing-page-link'
 					to='/login'>
-					<h1>Get Started</h1>
+					<h1 style={{fontSize:"20px", marginTop:"350px", border:"2px solid #4493D6", background:"#4493D6", padding:"8px", borderRadius:"8px"}}>Get Started</h1>
 				</Link>
 			</div>
 		</div>
 	);
 }
-
 export default LandingPage;

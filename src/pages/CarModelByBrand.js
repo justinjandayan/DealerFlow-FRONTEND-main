@@ -15,7 +15,7 @@ function CarModelByBrand() {
 
   const getVehicles = useCallback(async () => {
     try {
-      let url = `http://localhost:8000/api/model/${brandId}?page=${currentPage}&limit=${vehiclesPerPage}`;
+      let url = `https://dealerflow-backend-api-jrt9.onrender.com/api/car/model/${brandId}?page=${currentPage}&limit=${vehiclesPerPage}`;
       const response = await axios.get(url);
       const {
         models,
@@ -61,10 +61,10 @@ function CarModelByBrand() {
       <div className={styles["pagination-container"]}>
         <span>Page: {currentPage}</span>
         <div className={styles["pagination-buttons"]}>
-          <button onClick={prevPage} disabled={currentPage === 1}>
+          <button className='btn btn-primary' onClick={prevPage} disabled={currentPage === 1}>
             Prev Page
           </button>
-          <button onClick={nextPage} disabled={currentPage === totalPages}>
+          <button className='btn btn-primary' onClick={nextPage} disabled={currentPage === totalPages}>
             Next Page
           </button>
         </div>

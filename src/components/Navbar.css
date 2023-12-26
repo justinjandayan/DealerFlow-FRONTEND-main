@@ -1,6 +1,6 @@
 .navbar {
-	background-color: #a91008;
-	height: 80px;
+	background-color: #438ce0;
+	height: 100px;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
@@ -13,7 +13,7 @@
 }
 
 .nav-menu {
-	background-color: #510000;
+	background-color: #b74949;
 	width: 250px;
 	height: 100vh;
 	display: flex;
@@ -54,7 +54,7 @@
 }
 
 .nav-text a:hover {
-	background-color: #300000;
+	background-color: #b74949;
 }
 
 .nav-menu-items {
@@ -68,7 +68,7 @@
 }
 
 .navbar-toggle {
-	background-color: #510000;
+	background-color: #b74949;
 	width: 100%;
 	height: 80px;
 	display: flex;
@@ -82,4 +82,9 @@ span {
 
 .logout {
 	margin-top: auto;
+}
+
+.image-black {
+width: 80px;
+height: 80px;
 }

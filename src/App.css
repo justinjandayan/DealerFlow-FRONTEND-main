@@ -6,6 +6,7 @@
   padding: 0;
   font-family: system-ui, apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
 }
 /* 
 .home, */
@@ -19,9 +20,15 @@
   font-size: 3rem;
 }
 
+body {background-image: url("../public/images/image9.png");
+  background-size:cover;
+  background-position:center;
+  background-repeat: no-repeat;
+}
+
 /* CSS */
 .landing-page {
-  background-image: url("../public/images/image2.jpg");
+  background-image: url("../public/images/image10.png");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -65,8 +72,12 @@
   }
 }
 
+
 /* Add this to your CSS */
 .login-register-form {
+  background-image: url("../public/images/image9.png");
+  background-size: cover;
+  background-position: center;
   opacity: 0; /* Initially set to transparent */
   animation: fadeIn 1s forwards; /* Apply the animation */
   display: flex;
@@ -74,9 +85,9 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #f3f4f6;
+  background-color: #f6f3f4;
   border: 1px solid #000000; /* Border */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow */
+  box-shadow: 0 4px 8px rgba(142, 22, 22, 0.1); /* Box shadow */
   padding: 20px; /* Padding for better spacing */
 }
 
@@ -156,3 +167,4 @@
   margin-top: 80px;
   margin-bottom: 20px;
 }
+

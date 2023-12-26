@@ -10,7 +10,7 @@ function Brandlist() {
 
   const getBrand = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/api/brand");
+      const response = await axios.get("https://dealerflow-backend-api-jrt9.onrender.com/api/car/brand");
       setBrand(response.data);
     } catch (error) {
       console.log(error);

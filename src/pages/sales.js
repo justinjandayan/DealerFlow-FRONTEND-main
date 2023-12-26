@@ -7,7 +7,7 @@ function SalesLastThreeYears() {
 
 	const getSalesLastThreeYears = async () => {
 		try {
-			const response = await axios.get("http://localhost:8000/api/car/sales");
+			const response = await axios.get("https://dealerflow-backend-api-jrt9.onrender.com/api/car/sales");
 			console.log(response.data);
 			setsalesLastThreeYears(response.data);
 		} catch (error) {
@@ -63,8 +63,9 @@ function SalesLastThreeYears() {
 	};
 
 	return (
+		<div className='login-register-form'>
 		<div className='table-container'>
-			<h1>SALES</h1>
+			<h1 style={{marginTop:"-200px"}}>SALES</h1>
 			<DataTable
 				columns={columns}
 				data={salesLastThreeYears}
@@ -73,6 +74,7 @@ function SalesLastThreeYears() {
 				// Additional DataTable props can be added as needed
 			/>
 		</div>
+	</div>
 	);
 }
 

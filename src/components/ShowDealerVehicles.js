@@ -21,7 +21,7 @@ function ShowAllDealersVehicles() {
   const getVehicles = useCallback(async () => {
     try {
       setIsLoading(true);
-      let url = `http://localhost:8000/api/dealerVehicles/${dealerId}?page=${currentPage}&limit=${vehiclesPerPage}`;
+      let url = `https://dealerflow-backend-api-jrt9.onrender.com/api/car/dealerVehicles/${dealerId}?page=${currentPage}&limit=${vehiclesPerPage}`;
       const response = await axios.get(url);
       const { models, currentPage: page, totalPages } = response.data;
       if (models.length === 0) {
@@ -43,7 +43,7 @@ function ShowAllDealersVehicles() {
   const getDealerVehicle = useCallback(async () => {
     try {
       const response = await axios.get(
-        `http://localhost:8000/api/salesByDealer/${dealerId}`
+        `https://dealerflow-backend-api-jrt9.onrender.com/api/car/salesByDealer/${dealerId}`
       );
       console.log(response.data);
       setdealerVehicles(response.data); // Assuming setDealerVehicles is a state setter function
@@ -122,7 +122,7 @@ function ShowAllDealersVehicles() {
           {/* Consider rendering a specific vehicle's image */}
           {/* <img src={vehicles.modelName} alt={vehicles.modelName} /> */}
           <Link className={styles["dealer-deal"]} to={"/dealer-profile"}>
-            <span>
+            <span style={{color:"black"}}>
               <FaChevronLeft className={styles["dealer-deal-arrow"]} />
               back
             </span>
@@ -135,10 +135,10 @@ function ShowAllDealersVehicles() {
           <div className={styles["pagination-container"]}>
             <span>Page: {currentPage}</span>
             <div className={styles["pagination-buttons"]}>
-              <button onClick={prevPage} disabled={currentPage === 1}>
+              <button className='btn btn-primary' onClick={prevPage} disabled={currentPage === 1}>
                 Prev Page
               </button>
-              <button onClick={nextPage} disabled={currentPage === totalPages}>
+              <button className='btn btn-primary' onClick={nextPage} disabled={currentPage === totalPages}>
                 Next Page
               </button>
             </div>

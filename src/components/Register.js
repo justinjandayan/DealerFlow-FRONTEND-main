@@ -43,7 +43,7 @@ export default function Register() {
 		}
 
 		axios
-			.post("http://localhost:8000/api/auth/register", {
+			.post("https://dealerflow-backend-api-jrt9.onrender.com/api/auth/register", {
 				username,
 				password,
 			})
@@ -58,7 +58,7 @@ export default function Register() {
 
 	return (
 		<div className='login-register-form'>
-			<div className='login-register-box'>
+			<div className='login-register-box card p-5 border-primary bg-body-secondary'>
 				<h2 style={{ textAlign: "center", marginBottom: "30px" }}>Register</h2>
 				{error && <Alert variant='danger'>{error}</Alert>}
 				<Form onSubmit={(e) => handleSubmit(e)}>

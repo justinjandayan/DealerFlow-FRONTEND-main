@@ -11,7 +11,7 @@ function Home() {
 
 	const getVehicles = useCallback(async () => {
 		try {
-			let url = `http://localhost:8000/api/car/model?page=${currentPage}&limit=${vehiclesPerPage}`;
+			let url = `https://dealerflow-backend-api-jrt9.onrender.com/api/car/model?page=${currentPage}&limit=${vehiclesPerPage}`;
 
 			const response = await axios.get(url);
 			const { models, currentPage: page } = response.data;
@@ -36,8 +36,9 @@ function Home() {
 	};
 
 	return (
+		<div className='vehiclelist-background'>
 		<div className={styles["home-page"]}>
-			<h1>DealerFlow CAR LIST</h1>
+			<h1>CAR LISTS</h1>
 			<Brandlist />
 			<div className={styles["vehicle-grid"]}>
 				{vehicles.map((vehicle, index) => (
@@ -65,6 +66,7 @@ function Home() {
 				</div>
 			</div>
 		</div>
+	</div>
 	);
 }
 

@@ -7,7 +7,7 @@ function DealerProfile() {
 
 	const getDealerProfiles = async () => {
 		try {
-			const response = await axios.get("http://localhost:8000/api/car/dealer");
+			const response = await axios.get("https://dealerflow-backend-api-jrt9.onrender.com/api/car/dealer");
 			// console.log(response.data); // Check to ensure you're receiving data
 			setDealerProfiles(response.data);
 		} catch (error) {
